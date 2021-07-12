@@ -8,23 +8,15 @@ Write a function named `addOne` that takes an array of numbers, and returns a ne
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
 
-// const addOne = (arr) => {
-//   const plus = [];
-
-//   arr.forEach(function (value) {
-//     plus.push(value + 1);
-//   });
-//   //console.log(arr);
-//   console.log(plus);
-// }
-
 const addOne = (arr) => {
-  const newArr = [];
-  arr.forEach((value, index) => {
-    newArr.push(value + 1);
+  const plus = [];
+
+  arr.forEach(function (value) {
+    plus.push(value + 1);
   });
-  return newArr;
+  return plus;
 }
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -70,17 +62,27 @@ Then, write a function named `speaker` that takes in an array of strings and a c
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
 ------------------------------------------------------------------------------------------------ */
 
+// const greeting = (word) => {
+//   let greet = [];
+//   word.forEach(function(value) {
+//     greet.push(`${value.toUpperCase()}!`);
+//   });
+//   console.log(greet);
+// };
+
+// const speaker = (words, greeting) => {
+//   greeting(words);
+// };
+
 const greeting = (word) => {
-  let greet = [];
-  word.forEach(function(value) {
-    greet.push(`${value.toUpperCase()}!`);
-  });
-  console.log(greet);
+  return `${word.toUpperCase()}!`;
 };
 
 const speaker = (words, greeting) => {
-  greeting(words);
-};
+  let greet = [];
+  words.forEach(value => greet.push(greeting(value)));
+  return greet;
+}
 
 
 /* ------------------------------------------------------------------------------------------------
