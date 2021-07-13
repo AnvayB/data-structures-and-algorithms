@@ -128,7 +128,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  let list = [];
+  for (let i = 0; i < availableItems.length; i++){
+    if (availableItems[i].available == true){
+    list.push(availableItems[i].name);
+    }
+  }
+  return list;
 };
 
 /* ------------------------------------------------------------------------------------------------
