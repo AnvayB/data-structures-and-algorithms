@@ -54,7 +54,10 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+  let oddNum = arr.filter(function(value) {
+    return (value % 2 == 1);
+  })
+  return oddNum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,7 +69,10 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  let notIn = arr.filter(function(value) {
+    return !forbiddenValues.includes(value);
+  })
+  return notIn;
 };
 
 /* ------------------------------------------------------------------------------------------------
