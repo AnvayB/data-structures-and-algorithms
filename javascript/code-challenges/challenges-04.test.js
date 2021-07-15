@@ -115,10 +115,7 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  arr.forEach(function(a,b) {
-    return a.price - b.price;
-  })
-  console.log(arr);
+  arr.sort((a, b) => (a.price > b.price) ? 1 : -1);
   return arr;
 };
 
