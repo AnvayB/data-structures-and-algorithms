@@ -36,7 +36,13 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
-  // Solution code here...
+  let capitals = []
+  arr.forEach(function(element) {
+    if (element[0] === element[0].toUpperCase() ){
+      capitals.push(element);
+    }
+  });
+  return capitals;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,7 +57,6 @@ const sortNumbers = (arr) => {
   arr.sort(function(a,b) {
     return a - b;
   });
-  console.log(arr);
   return arr;
 };
 
@@ -64,7 +69,8 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => b - a);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
