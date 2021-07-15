@@ -83,8 +83,22 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
+
 const alphabetize = (arr) => {
-  // Solution code here...
+  let capitals = [];
+  let lowercase = [];
+  let order = [];
+  arr.forEach(function(element) {
+    if (element[0] === element[0].toUpperCase()){
+      capitals.push(element);
+      capitals.sort();
+    } else {
+      lowercase.push(element);
+      lowercase.sort();
+    }
+  })
+  order = capitals.concat(lowercase);
+  return order;
 };
 
 /* ------------------------------------------------------------------------------------------------
