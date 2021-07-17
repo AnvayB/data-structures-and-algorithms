@@ -129,7 +129,12 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+  let allNames = arr.reduce( (accumulator, person, idx) => {
+    accumulator[idx] = person.name;
+    return accumulator;
+  }, [] );
+
+return allNames;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -141,8 +146,20 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  let array = str.split('').reduce( (rev, value) => {
+    return value + rev;
+  }, '')
+  return array;
 };
+
+/* This worked in Replit, idk why it's not working here
+const reversedString = (str) => {
+  return str.reduce((rev, char) => char+rev, "").split("");
+  
+}
+let array = reversedString(reversedString(str));
+console.log(array.join(''));
+*/
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
