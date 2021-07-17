@@ -58,7 +58,6 @@ const forLoopTwoToThe = (arr) => {
   for (let i = 0; i < arr.length; i++){
     power.push(Math.pow(2, arr[i]));
   }
-  console.log(power);
   return power;
 };
 
