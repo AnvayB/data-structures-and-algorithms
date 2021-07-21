@@ -25,7 +25,9 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-  // Solution code here...
+  starWarsArr.sort((a,b) => b.height - a.height);
+
+  return starWarsArr;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,10 +49,9 @@ Write a function named joinArray that takes an array and joins all of the elemen
 ------------------------------------------------------------------------------------------------ */
 
 const joinArray = (arr) => {
-  let joined = [];
-  arr.forEach(function(elem) {
-   
-  })
+  let joined = arr.join(' ');
+
+  return joined;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,13 +68,12 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
-  result.push(str);
-  for (let i = 0; i < str.length; i++) {
-    let index = str.substring(i, i+1)
-    console.log(index);
+  let remaining = [];
+  for (let i = 0; i < str.length + 1; i++) {
+    remaining.push(str.slice(i));
   }
-  return result;
+
+  return remaining;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -147,7 +147,9 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  result.push(recipe.ingredients.splice());
+  console.log(result);
+  //idk
   return result;
 };
 
