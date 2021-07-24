@@ -149,9 +149,7 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  result.push(recipe.ingredients.splice());
-  console.log(result);
-  //idk
+  // Solution code here...
   return result;
 };
 
